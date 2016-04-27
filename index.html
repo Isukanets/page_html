@@ -4,45 +4,6 @@
         <meta charset="utf-8">
         <title>Task_html5</title>
         <style type="text/css"></style>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function () {
-               function init() {
-               if (localStorage["name"]) {
-                   $('#name').val(localStorage["name"]);
-                }
-               if (localStorage["firstname"]) {
-                   $('#firstname').val(localStorage["firstname"]);
-                }
-               if (localStorage["tel"]) {
-                   $('#tel').val(localStorage["tel"]);
-                }    
-               if (localStorage["email"]) { 
-                   $('#email').val(localStorage["email"]);
-               }
-               if (localStorage["date"]) {
-                   $('#date').val(localStorage["date"]);
-                }
-               if (localStorage["city"]) {
-                   $('#city').val(localStorage["city"]);
-                } 
-               if (localStorage["education"]) {
-                   $('#education').val(localStorage["education"]);
-                }    
-               if (localStorage["message"]) {
-                   $('#message').val(localStorage["message"]);
-               }
-               }
-               init();
-               });
-                   $('.stored').keyup(function () {
-               localStorage[$(this).attr('name')] = $(this).val();
-               });
-                   $('#localStorageTest').submit(function() {
-               localStorage.clear();
-               });
-        </script>
-
     </head>
     <body>
         <header>логотип</header>
@@ -95,5 +56,45 @@
                 <address>Адреса підприємства (фактична)</address>
                 <small>Електронна адреса</small>
             </footer>
+            
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+               function init() {
+               if (localStorage["name"]) {
+                   $('#name').val(localStorage["name"]);
+                }
+               if (localStorage["firstname"]) {
+                   $('#firstname').val(localStorage["firstname"]);
+                }
+               if (localStorage["tel"]) {
+                   $('#tel').val(localStorage["tel"]);
+                }    
+               if (localStorage["email"]) { 
+                   $('#email').val(localStorage["email"]);
+               }
+               if (localStorage["date"]) {
+                   $('#date').val(localStorage["date"]);
+                }
+               if (localStorage["city"]) {
+                   $('#city').val(localStorage["city"]);
+                } 
+               if (localStorage["education"]) {
+                   $('#education').val(localStorage["education"]);
+                }    
+               if (localStorage["message"]) {
+                   $('#message').val(localStorage["message"]);
+               }
+               }
+               init();
+               });
+                   $('.stored').keyup(function () {
+               localStorage[$(this).attr('name')] = $(this).val();
+               });
+                   $('#localStorageTest').submit(function() {
+               localStorage.clear();
+               });
+        </script>
+
     </body>
 </html>
