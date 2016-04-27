@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Task_html5</title>
+        <style type="text/css"></style>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+               function init() {
+               if (localStorage["name"]) {
+                   $('#name').val(localStorage["name"]);
+                }
+               if (localStorage["firstname"]) {
+                   $('#firstname').val(localStorage["firstname"]);
+                }
+               if (localStorage["tel"]) {
+                   $('#tel').val(localStorage["tel"]);
+                }    
+               if (localStorage["email"]) { 
+                   $('#email').val(localStorage["email"]);
+               }
+               if (localStorage["date"]) {
+                   $('#date').val(localStorage["date"]);
+                }
+               if (localStorage["city"]) {
+                   $('#city').val(localStorage["city"]);
+                } 
+               if (localStorage["education"]) {
+                   $('#education').val(localStorage["education"]);
+                }    
+               if (localStorage["message"]) {
+                   $('#message').val(localStorage["message"]);
+               }
+               }
+               init();
+               });
+                   $('.stored').keyup(function () {
+               localStorage[$(this).attr('name')] = $(this).val();
+               });
+                   $('#localStorageTest').submit(function() {
+               localStorage.clear();
+               });
+        </script>
+
+    </head>
+    <body>
+        <header>логотип</header>
+            <nav>
+                <ul>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#contacts">Контактні дані</a></li>
+                </ul>
+            </nav>
+          
+            <section>
+                <article>
+                    <hgroup>
+                        <h1>Анкета працівника</h1>
+                        <h5>інформація залишається конфіденційною</h5>
+                    </hgroup>
+                    <form id="localStorageTest" method="post" action="">
+                        <label>Ім'я:</label>
+                            <input type="text" name="name" id="name" class="stored" value="" required/><br><br>
+                        <label>Прізвище:</label>
+	                        <input type="name" name="firstname" id="firstname" class="stored" value="" required/><br><br>
+	                    <label>Номер телефону:</label>
+	                        <input type="tel" name="tel" id="tel" class="stored" value="" required/><br><br>
+                        <label>Електронна пошта:</label>
+                            <input type="email" name="email" id="email" class="stored" value="" required/><br><br>
+	                    <label>Дата народження:</label>
+	                        <input type="date" name="date" id="date" class="stored" value="" required/><br><br>
+	                    <label>Місто проживання:</label>
+	                        <input type="text" name="city" id="city" class="stored" value="" /><br><br>
+	                    <label>Освіта:</label>
+	                        <input type="text" name="education" id="education" class="stored" value="" placeholder="Вища/Вища незакінчена/Середня"/><br><br>     
+	                    <label>Додаткові відомості:</label>
+	                        <textarea name="message" id="message" class="stored" placeholder="інформація, яка розкриє Ваші навики та здібності"></textarea><br><br>
+	                        <input type="submit" class="demo-button" value="Надіслати"/><br><br>
+                   </form>
+                </article>
+            </section>
+
+            <aside>
+                <p>Бокова панель</p>
+                <figure>
+                    <img src="picture.jpg" alt="Осінь">
+                    <figcaption>Осінній ліс</figcaption>
+                </figure>
+            </aside>
+          
+            <footer id="contacts">
+                <h3>Контактні дані</h3>
+                <blockquote>Назва підприємства</blockquote>
+                <address>Адреса підприємства (фактична)</address>
+                <small>Електронна адреса</small>
+            </footer>
+    </body>
+</html>
